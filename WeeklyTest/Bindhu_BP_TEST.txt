@@ -1,0 +1,223 @@
+1. Overloading  -- In a Class same method name with different parameters of different datatype
+
+class Overloading{
+	String name;
+	int age; 
+	static void student(String name)
+		{
+			System.out.println("Name : "+name);
+		}
+		
+	static void student(String name,int age)
+		{
+			System.out.println("Name : "+name);
+			System.out.println("Age : "+age);
+		}
+	
+} 
+class Main
+{
+public static void main(String[] args)
+	{
+		Overloading o = new Overloading();
+		o.student("Bindhu");
+		o.student("Bindhu",22);
+		
+	}
+}
+
+2.Variables - three types
+		instance Variable - variable declared inside classs and outside the main,and it can be access using Class Name
+		static variable - variable declared with static keyword and it can be access using object
+		local Variable - variable declared within the method or block
+
+	class Variable
+	{
+		int age = 22;     	//instance variable
+		static String name="Bindhu";		//satic variable
+		public static void main(String[] args)
+		{
+			Variable var = new Variable();
+			Variable.age;
+			var.name;
+			Variable.mathod("Prabhakar");//arguments
+		}
+		void method(String fName)//Local Variable
+		{
+			sop(fName);
+		}
+	}
+
+
+3. Heap Memory - It is a Primary memory created by jvm, it consist of Meta Space,Constant pool,Instance memory,stack
+
+   Stack memory - when program has any method it create Stack in heap and perform execition after the execution it deallocate memory
+		
+4. Constructor Overloading
+
+
+class ConstructorOverloading
+{
+	String name;
+	String college;
+	String branch;
+
+	ConstructorOverloading()
+	{
+		this.name="Bindhu";
+		this.college = "UBDT";
+		this.branch="CSE";
+		
+		sop(this.name);
+		sop(this.college);
+		sop(this.branch);
+	}
+	
+	ConstructorOverloading(String name)
+	{
+		this.name=name;
+		sop(this.name);
+	}
+
+	ConstructorOverloading(String name,int age)
+	{
+		this.name=name;
+		this.age=age
+		sop(this.name);
+		sop(this.age);
+	}
+}
+
+class Main{
+public static void main(String[] args)
+{
+	ConstructorOverloading co = new ConstructorOverloading();
+	ConstructorOverloading co1 = new ConstructorOverloading("SAM");
+	ConstructorOverloading co2 = new ConstructorOverloading("Shree",7);
+
+}
+}
+
+5. Instance Method Overloading - Access using ClassName
+
+
+class Overloading{
+	String name;
+	int age; 
+	void student(String name)
+		{
+			System.out.println("Name : "+name);
+		}
+		
+	void student(String name,int age)
+		{
+			System.out.println("Name : "+name);
+			System.out.println("Age : "+age);
+		}
+	
+} 
+class Main
+{
+public static void main(String[] args)
+	{
+		
+		Overloading.student("Bindhu");
+		Overloading.student("Bindhu",22);
+		
+	}
+}
+
+
+
+6. 
+
+
+class Static
+{
+	static String name;
+	
+        
+	static
+	{
+		name="Bindhu";
+	}
+        
+	static void student()
+	{
+	      sop(name);
+	}
+}
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		Static staicVar = new Static();
+		staicVar.student();
+	}
+}
+
+
+7. class Chaining
+  {
+	String name;
+	int age;
+	String clg;
+	String branch;
+
+	Chaining()
+	{
+		this("Nandu",23);
+		sop("Calling constructor 1);
+	}
+	Chaining(String name)
+	{
+ 		this.name="Bindhu";
+		this.age=22;
+		this.clg= "UBDT";
+		this.branch="CSE";
+		this();
+		sop("CAlling constuctor 2");
+	}
+	Chaining(Strin name,int age)
+	{
+		this("CSE","PES");
+		sop("Calling constructor 3);
+	}
+	Chaining(String branch,String clg)
+	{
+		this("ANKITHA");
+		sop("Calling constructor 4);
+	}
+	Chaining(int age)
+	{
+		sop("Calling Constructor 5 );	
+	}
+ 	Chaining(String name.int age,String branch)
+	{
+		this(33);
+		sop("Calling Constructor");
+	}
+}
+class Main{
+p.s.v.m(String[] args)
+{
+Chaining chain = new Chainig();
+}
+}
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		
